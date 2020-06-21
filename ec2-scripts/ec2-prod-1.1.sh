@@ -16,7 +16,6 @@ su ec2-user -l -c "cd ~/python-image-gallery && pip3 install -r requirements.txt
 
 aws s3 cp s3://${CONFIG_BUCKET}/nginx/nginx.conf /etc/nginx
 aws s3 cp s3://${CONFIG_BUCKET}/nginx/default.d/image_gallery.conf /etc/nginx/default.d
-aws s3 cp s3://${CONFIG_BUCKET}/nginx/index.html /usr/share/nginx/html
 chown nginx:nginx /usr/share/nginx/html/index.html
 
 # Start/enable services
