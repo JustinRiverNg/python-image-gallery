@@ -1,6 +1,8 @@
 from flask import Flask
 from flask import request
 from flask import render_template
+import sys, os
+sys.path.append('/home/ec2-user/python-image-gallery/gallery/ui')
 from db_functions import *
 import secrets
 
@@ -36,3 +38,6 @@ def userDeleted():
     x = request.form['submit']
     deleteUser2()
     return render_template('userDeleted.html')
+
+if __name__ == '__main__':
+    main()
